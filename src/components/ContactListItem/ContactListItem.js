@@ -5,13 +5,10 @@ import { createUseStyles } from 'react-jss';
 const useStyles = createUseStyles({
   button: {
     marginLeft: '10px',
-    backgroundColor: 'white',
+    backgroundColor: 'skyblue',
     border: ['1px', 'solid', 'grey'],
     borderRadius: '5px',
     cursor: 'pointer',
-    '&:hover': {
-      backgroundColor: 'skyblue',
-    },
   },
   item: {
     listStyle: 'none',
