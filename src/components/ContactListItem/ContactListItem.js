@@ -14,6 +14,7 @@ const useStyles = createUseStyles({
     },
   },
   item: {
+    listStyle: 'none',
     marginBottom: '10px',
   },
 });
