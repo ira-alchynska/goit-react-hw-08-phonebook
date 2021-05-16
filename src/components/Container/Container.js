@@ -6,10 +6,9 @@ const useStyles = createUseStyles({
     margin: {
       right: 'auto',
       left: 'auto',
-      top: '20px',
     },
     padding: '20px',
-    width: '400px',
+    width: '1200px',
   },
 });
 

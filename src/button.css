@@ -1,0 +1,12 @@
+button {
+  cursor: pointer;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: block;
+  padding: 5px;
+  width: 100px;
+  background-color: skyblue;
+  border-radius: 5px;
+}

@@ -1,20 +1,55 @@
-import React from 'react';
-
+import React, { Component, Suspense, lazy } from 'react';
+import { Switch } from 'react-router';
 import Container from './components/Container';
-import ContactList from './components/ContactList/ContactList.container';
-import Filter from './components/Filter';
-import ContactForm from './components/ContactForm';
+import AppBar from './components/AppBar';
+import { getCurrentUser } from '../src/redux/auth/auth-operations';
+import { connect } from 'react-redux';
+import PrivateRoute from './components/PrivateRoute';
+import PablicRoute from './components/PablicRoute';
 
-function App() {
-  return (
-    <Container>
-      <h1>Phonebook</h1>
-      <ContactForm />
-      <h2>Contacts</h2>
-      <Filter />
-      <ContactList />
-    </Container>
-  );
+const HomeView = lazy(() => import('./Views/HomeView'));
+const RegistrationView = lazy(() => import('./Views/RegistrationView'));
+const LoginView = lazy(() => import('./Views/LoginView'));
+const PhonebookView = lazy(() => import('./Views/PhonebookView'));
+
+class App extends Component {
+  componentDidMount() {
+    this.props.onGetCurrentUser();
+  }
+  render() {
+    return (
+      <Container>
+        <AppBar />
+        <Suspense fallback={<p>Loading...</p>}>
+          <Switch>
+            <PablicRoute exact path="/" component={HomeView} />
+            <PrivateRoute
+              path="/phonebook"
+              redirectTo="/login"
+              component={PhonebookView}
+            />
+            <PablicRoute
+              path="/login"
+              redirectTo="/phonebook"
+              restricted
+              component={LoginView}
+            />
+
+            <PablicRoute
+              path="/register"
+              redirectTo="/phonebook"
+              restricted
+              component={RegistrationView}
+            />
+          </Switch>
+        </Suspense>
+      </Container>
+    );
+  }
 }
 
-export default App;
+const mapDispatchToProps = {
+  onGetCurrentUser: getCurrentUser,
+};
+
+export default connect(null, mapDispatchToProps)(App);

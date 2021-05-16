@@ -1,8 +1,8 @@
 {
-  "name": "goit-react-hw-07-phonebook",
+  "name": "goit-react-hw-08-phonebook",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ira-alchynska.github.io/goit-react-hw-07-phonebook",
+  "homepage": "https://ira-alchynska.github.io/goit-react-hw-08-phonebook",
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.1",
     "@testing-library/jest-dom": "^5.12.0",
@@ -16,6 +16,8 @@
     "react-jss": "^10.6.0",
     "react-loader-spinner": "^4.0.0",
     "react-redux": "^7.2.4",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "redux": "^4.1.0",
     "redux-persist": "^6.0.0",
@@ -29,7 +31,7 @@
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "api-server": "json-server --delay 300 --port 4040 --watch db.json "
+    "api": "json-server --watch db.json "
   },
   "eslintConfig": {
     "extends": [

@@ -10,14 +10,14 @@ const useStyles = createUseStyles({
     padding: '5px',
     outline: 'none',
     '&:focus': {
-      border: ['2px', 'solid', 'blue'],
+      border: ['2px', 'solid', 'gray'],
       boxShadow: [
         'inset',
         '0px',
         '0px',
         '3px',
         '3px',
-        'rgba(116, 113, 255, 0.34)',
+        'rgba(75, 142, 187, 0.34)',
       ],
     },
   },

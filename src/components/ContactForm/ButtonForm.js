@@ -12,12 +12,9 @@ const useStyles = createUseStyles({
     },
     display: 'block',
     padding: '5px',
-    width: '140px',
-    backgroundColor: 'transparent',
+    width: '100px',
+    backgroundColor: 'skyblue',
     borderRadius: '5px',
-    '&:hover': {
-      backgroundColor: ' rgba(116, 113, 255, 0.34)',
-    },
   },
 });
 
