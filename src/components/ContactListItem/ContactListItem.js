@@ -10,7 +10,7 @@ const useStyles = createUseStyles({
     borderRadius: '5px',
     cursor: 'pointer',
     '&:hover': {
-      backgroundColor: ' rgba(116, 113, 255, 0.34)',
+      backgroundColor: 'skyblue',
     },
   },
   item: {
